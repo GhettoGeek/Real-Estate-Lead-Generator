@@ -6,7 +6,8 @@ require('./db/db.js')
 // middleware
 app.use(bodyParser.urlencoded({extended: false}));
 // controllers
-
+const UserController = require('./controllers/UserController.js');
+app.use('/user', UserController);
 
 app.get('*',(req,res)=>{
 	res.status(404).send('404')
