@@ -1,12 +1,12 @@
 {
   "name": "partial",
   "version": "1.0.0",
-  "description": "",
+  "description": "Project 2",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sergio Rocha",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.7",

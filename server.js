@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+require('./db/db.js')
+
 app.get('*',(req,res)=>{
 	res.status(404).send('404')
 })
