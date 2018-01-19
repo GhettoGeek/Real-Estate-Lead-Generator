@@ -10,10 +10,42 @@ router.route('/')
 
 router.route('/login')
 	.get((req,res)=>{
-		res.render('login.ejs')
+		res.render('login.ejs', {
+			message: req.session.message
+		})
 	})
 	.post((req,res)=>{
-		res.send(req.body);
+		User.findOne({username: req.body.username}, (err,userFound)=>{
+			if (userFound){
+				//compare passwords
+				if (bcrypt.compareSync(req.body.password, userFound.password)) {
+					req.session.username = req.body.username;
+					req.session.loggedIn = true;
+
+					if (req.session.message){
+						delete req.session.message
+					}
+					res.redirect('/home')
+				} else { // passwords didnt match
+					req.session.message = "Incorrect username or password";
+					res.redirect('user/login');
+				}
+			} else {
+				req.session.message = "Incorrect username or password";
+				res.redirect('/user/login');
+			}
+		})
+	})
+
+router.route('/logout')
+	.get((req,res)=>{
+		req.session.destroy((err)=>{
+			if (err){
+				console.log('broke');
+			} else {
+				res.redirect('/user/login');
+			}
+		})
 	})
 
 router.route('/register')
@@ -34,7 +66,7 @@ router.route('/register')
 			if (err){
 				res.send(err)
 			} else {
-				res.send(created);
+				res.redirect('/user/login');
 			}
 		})
 	})
