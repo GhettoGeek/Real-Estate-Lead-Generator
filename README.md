@@ -10,12 +10,15 @@ User (agent) should be able to view requested showings
 User (agent) should be able to reject or accept showing requests
 
 ## Wireframes
-<div><h1>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
-<div><h1>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
-<div><h1>Search</h1><img height="300" width="150" src="./imgs/searchFrame.png"></div>
-<div><h1>List of properties</h1><img height="300" width="150" src="./imgs/showPropertiesFrame.png"></div>
-<div><h1>Individual property</h1><img height="300" width="150" src="./imgs/showIndividualPropertyFrame.png"></div>
-<div><h1>Mobile Menu</h1><img height="300" width="150" src="./imgs/mobileMenuFrame.png"></div>
+
+<div style="display: flex, flex-wrap: wrap">
+	<div><h1>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
+	<div><h1>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
+	<div><h1>Search</h1><img height="300" width="150" src="./imgs/searchFrame.png"></div>
+	<div><h1>List of properties</h1><img height="300" width="150" src="./imgs/showPropertiesFrame.png"></div>
+	<div><h1>Individual property</h1><img height="300" width="150" src="./imgs/showIndividualPropertyFrame.png"></div>
+	<div><h1>Mobile Menu</h1><img height="300" width="150" src="./imgs/mobileMenuFrame.png"></div>
+</div>
 
 ## Technologies Used
 
