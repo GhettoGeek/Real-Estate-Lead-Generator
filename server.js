@@ -7,6 +7,7 @@ const session = require('express-session');
 
 require('./db/db.js')
 // middleware
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
 	secret: "This is the secret",

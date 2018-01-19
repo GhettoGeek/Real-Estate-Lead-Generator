@@ -22,7 +22,7 @@ Provides an interface for customer and agent interaction.
 
 ## Technologies Used
 
-## reuirements for install/use
+## requirements for install/use
 
 ## upcoming features
 

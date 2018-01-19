@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 router.route('/')
 	.get((req,res)=>{
-		res.send('works')
+		res.render('mobileRegister.ejs')
 	})
 
 router.route('/login')
