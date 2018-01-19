@@ -11,7 +11,7 @@ User (agent) should be able to reject or accept showing requests
 
 ## Wireframes
 
-<div style="display: flex; flex-wrap: wrap">
+<div style="display: flex; flex-wrap: wrap;">
 	<div><h1>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
 	<div><h1>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
 	<div><h1>Search</h1><img height="300" width="150" src="./imgs/searchFrame.png"></div>
