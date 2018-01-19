@@ -10,7 +10,7 @@ User (agent) should be able to view requested showings
 User (agent) should be able to reject or accept showing requests
 
 ## Wireframes
-<img height="200" width="50" src="./imgs/loginFrame.png">
+<img height="300" width="150" src="./imgs/loginFrame.png">
 
 ## Technologies Used
 
