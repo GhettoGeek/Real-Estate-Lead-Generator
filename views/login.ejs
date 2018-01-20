@@ -1,18 +1,18 @@
 <html>
 	<head>
 		<title>Login</title>
-		<link rel="stylesheet" type="text/css" href="/css/mobileRegister.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
 <body>
 	<main class="main">
-		<h1 id="registration">L O G I N</h1>
+		<h1>L O G I N</h1>
 		<form class="form" action="/user/login" method="POST">
 			<input class="login-field" type="text" name="email" placeholder="Email"><br>
 			<input class="login-field" type="password" placeholder="Password" name="password"><br>
-			<button id="register-button">Login</button><br>
+			<button>Login</button><br>
 			<% if (message) { %>
-				<p class="error-notice"><%=message%></p>
+				<p id"login-error-notice"><%=message%></p>
 			<% } %>
 			<p id="already-registered">Need an account? Sign up <a href="/user/register">here</a></p>
 		</form>

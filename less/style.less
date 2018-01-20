@@ -49,36 +49,58 @@ table {
 }
 /*End of Universal CSS Reset*/
 
-body{
-	background-color: #09152A;
-	color: white;
-	font-size: 100%;
+@text: white;
+@error-text: red;
+@background-color: #09152A;
+@accent-color-1: #4717F6;
+
+body {
+	background-color: @background-color;
+	color: @text;
+}
+h1 {
+	text-align: center;
+    margin-bottom: 2em;
+    font-size: 4em;
+    color: @accent-color-1;
 }
 a {
-	color: #4717F6;
+	color: @accent-color-1;
 	text-decoration: none;
 }
-
+button {
+	color: @text;
+	height: 5%;
+	width: 90%;
+	background-color: @accent-color-1;
+	border: none;
+	font-size: 2em;
+}
 /* login view */
 #login-error-notice{
-	color: red;
+	color: @error-text;
 	font-size: 2em;
 	position: absolute;
 	margin-top: 8.5%;
 }
-
 /* registration view */
 #registration-error-notice{
-	color: red;
+	color: @error-text;
 	font-size: 2em;
 	position: absolute;
 	margin-top: 56.5%;
+}
+.main{
+	margin-top: 40%;
+}
+#already-registered{
+	margin-top: 20%;
+    font-size: 2em;
 }
 .form{
 	margin-left: 10%;
 	margin-top: 5em;
 }
-
 .login-field{
 	margin-bottom: 1em;
     width: 90%;
@@ -92,25 +114,4 @@ a {
 ::placeholder{
 	font-size: 1em;
 	color: #12397a;
-}
-#registration{
-	text-align: center;
-    margin-bottom: 2em;
-    font-size: 4em;
-    color: #4717F6;
-}
-#register-button{
-	color: white;
-	height: 5%;
-	width: 90%;
-	background-color: #4717F6;
-	border: none;
-	font-size: 2em;
-}
-.main{
-	margin-top: 40%;
-}
-#already-registered{
-	margin-top: 20%;
-    font-size: 2em;
 }
