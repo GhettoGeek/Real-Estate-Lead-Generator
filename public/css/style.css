@@ -132,6 +132,13 @@ body {
   background-color: #09152A;
   color: white;
 }
+div {
+  width: 29%;
+  border: 2.9px solid #4717F6;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+}
 h1 {
   text-align: center;
   margin-bottom: 2em;
@@ -178,6 +185,16 @@ button {
 .login-field {
   margin-bottom: 1em;
   width: 90%;
+  height: 5%;
+  border: none;
+  background-color: #10274f;
+  padding-left: 3%;
+  color: white;
+  font-size: 2.5em;
+}
+.select-field {
+  margin-bottom: 1em;
+  width: 29.65%;
   height: 5%;
   border: none;
   background-color: #10274f;

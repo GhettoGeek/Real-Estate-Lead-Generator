@@ -4,12 +4,11 @@ const User = require('../models/user.js');
 
 router.route('/')
 	.get((req,res)=>{
-		res.redirect('/home/0')
+		// res.redirect('/partial/0'); // Cool thing u can do
+		res.render('home.ejs')
 	})
-
-router.route('/search')
-	.get((req,res)=>{
-		res.render('search.ejs')
+	.post((req,res)=>{
+		console.log(req.body)
 	})
 
 router.route('/:id')

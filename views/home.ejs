@@ -1,11 +1,39 @@
 <html>
-<head>
-	<title>Home</title>
-</head>
-
-<%include ./partials/header.ejs %>
-
+	<head>
+		<title>Search Page</title>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	</head>
 <body>
-	<h1>This is page <%= page %></h1>
+	<main class="main">
+		<h1>PROPERTY SEARCH</h1>
+		<form class="form" action="/home" method="POST">
+			<div>neighborhood</div>
+			<div>min-beds</div>
+			<div>max-beds</div>
+			<select class="select-field" name="neighborhood">
+				<option value="old-town">Old Town</option>
+				<option value="printers-row">Printers Row</option>
+				<option value="west-loop">West Loop</option>
+				<option value="lincoln-park">Lincoln Park</option>
+			</select>
+			<select class="select-field" name="min-beds">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			<select class="select-field" name="max-beds">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+			<button id="register-button">Search</button><br>
+			<p id="already-registered">Invalid zip code, try again!</p>
+		</form>
+	</main>
 </body>
 </html>
