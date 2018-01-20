@@ -15,11 +15,11 @@ router.route('/login')
 		})
 	})
 	.post((req,res)=>{
-		User.findOne({username: req.body.username}, (err,userFound)=>{
+		User.findOne({email: req.body.email}, (err,userFound)=>{
 			if (userFound){
 				//compare passwords
 				if (bcrypt.compareSync(req.body.password, userFound.password)) {
-					req.session.username = req.body.username;
+					req.session.email = req.body.email;
 					req.session.loggedIn = true;
 
 					if (req.session.message){
@@ -27,11 +27,11 @@ router.route('/login')
 					}
 					res.redirect('/home')
 				} else { // passwords didnt match
-					req.session.message = "Incorrect username or password";
-					res.redirect('user/login');
+					req.session.message = "Incorrect email or password";
+					res.redirect('/user/login');
 				}
 			} else {
-				req.session.message = "Incorrect username or password";
+				req.session.message = "Incorrect email or password";
 				res.redirect('/user/login');
 			}
 		})
@@ -50,7 +50,7 @@ router.route('/logout')
 
 router.route('/register')
 	.get((req,res)=>{
-		res.render('register.ejs')
+		res.render('register.ejs',{message: false}) // Add option to see if user is already registered
 	})
 	.post((req,res)=>{
 		//add user to db and redirect to home
@@ -58,13 +58,14 @@ router.route('/register')
 		const hashword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
 
 		const newDbEntry = {
-			username: req.body.username,
+			fullname: req.body.fullname,
+			email: req.body.email,
 			password: hashword
 		}
 
 		User.create(newDbEntry, (err,created)=>{
 			if (err){
-				res.send(err)
+				res.render('register.ejs',{message: true});
 			} else {
 				res.redirect('/user/login');
 			}

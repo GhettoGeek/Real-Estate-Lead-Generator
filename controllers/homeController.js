@@ -7,6 +7,11 @@ router.route('/')
 		res.redirect('/home/0')
 	})
 
+router.route('/search')
+	.get((req,res)=>{
+		res.render('search.ejs')
+	})
+
 router.route('/:id')
 	.get((req,res)=>{
 		res.render('home.ejs',{

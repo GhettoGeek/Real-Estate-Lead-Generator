@@ -5,9 +5,12 @@ Provides an interface for customer and agent interaction.
 * User should be able to create an account
 * User should be able to log in to the application
 * User (client) should be able to search for a property based on a zip code query 
+* User (client) should be able to cancel request
 * User (client) should be able to request a showing of the chosen * property 
+* User (client) should be able to rate agent and property
 * User (agent) should be able to view requested showings 
 * User (agent) should be able to reject or accept showing requests
+
 
 ## Wireframes
 
@@ -22,7 +25,7 @@ Provides an interface for customer and agent interaction.
 
 ## Technologies Used
 
-## requirements for install/use
+## Requirements for install/use
 
 ## upcoming features
 

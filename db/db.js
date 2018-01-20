@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/project',{useMongoClient: true});
+mongoose.connect('mongodb://localhost:27017/realestates');
 
 mongoose.connection.once('open', ()=>{
 	console.log('Database connected on 27017');

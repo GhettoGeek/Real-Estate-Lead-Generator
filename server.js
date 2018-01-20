@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const session = require('express-session');
 
 // db
-
 require('./db/db.js')
 // middleware
 app.use(express.static('public'));

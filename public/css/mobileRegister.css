@@ -52,41 +52,55 @@ table {
 body{
 	background-color: #09152A;
 	color: white;
+	font-size: 100%;
 }
 a {
 	color: #4717F6;
 	text-decoration: none;
 }
+.error-notice{
+	color: red;
+	font-size: 2em;
+	position: absolute;
+	margin-top: 8.5%;
+}
 .form{
-	margin-left: 3%;
+	margin-left: 10%;
 	margin-top: 5em;
 }
 
 .login-field{
-	margin-bottom: .5em;
-	width: 97%;
-	height: 10%;
-	text-align: ;
-	border: none;
-	background-color: #10274f;
-	padding-left: 3%;
-	color: #4717F6;
+	margin-bottom: 1em;
+    width: 90%;
+    height: 5%;
+    border: none;
+    background-color: #10274f;
+    padding-left: 3%;
+    color: white;
+    font-size: 2.5em;
+}
+::placeholder{
+	font-size: 1em;
+	color: #12397a;
 }
 #registration{
 	text-align: center;
-	margin-top: 2em;
-	font-size: 30px;
-	color: #4717F6;
+    margin-bottom: 2em;
+    font-size: 4em;
+    color: #4717F6;
 }
 #register-button{
 	color: white;
-	height: 10%;
-	width: 97%;
+	height: 5%;
+	width: 90%;
 	background-color: #4717F6;
 	border: none;
+	font-size: 2em;
 }
-
+.main{
+	margin-top: 40%;
+}
 #already-registered{
-	margin-top: 15%;
-	text-align: center;
+	margin-top: 20%;
+    font-size: 2em;
 }

@@ -1,18 +1,21 @@
 <html>
-<head>
-	<title>Login Page</title>
-</head>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" type="text/css" href="/css/mobileRegister.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	</head>
 <body>
-	<h1>login page</h1>
-	<% if (message) { %>
-		<p><%=message%></p>
-	<% } %>
-
-	<form action="/user/login" method="POST">
-		<input type="text" name="username" placeholder="username">
-		<input type="password" name="password" placeholder="password">
-		<button>Log in</button>
-	</form>
-	<p>Need an account? Sign up <a href="/user/register">here</a></p>
+	<main class="main">
+		<h1 id="registration">L O G I N</h1>
+		<form class="form" action="/user/login" method="POST">
+			<input class="login-field" type="text" name="email" placeholder="Email"><br>
+			<input class="login-field" type="password" placeholder="Password" name="password"><br>
+			<button id="register-button">Login</button><br>
+			<% if (message) { %>
+				<p class="error-notice"><%=message%></p>
+			<% } %>
+			<p id="already-registered">Need an account? Sign up <a href="/user/register">here</a></p>
+		</form>
+	</main>
 </body>
 </html>

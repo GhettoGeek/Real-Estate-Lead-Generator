@@ -1,13 +1,21 @@
 <html>
-<head>
-	<title>Registration Page</title>
-</head>
+	<head>
+		<title>Registration</title>
+		<link rel="stylesheet" type="text/css" href="/css/mobileRegister.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	</head>
 <body>
-	<h1>Create an Account</h1>
-	<form action="/user/register" method="POST">
-		<input type="text" placeholder="Username" name="username">
-		<input type="password" placeholder="Password" name="password">
-		<button>Sign Up</button>
-	</form>
+	<main class="main">
+		<h1 id="registration">R E G I S T R A T I O N</h1>
+		<form class="form" action="/user/register" method="POST">
+			<input class="login-field" type="text" name="fullname" placeholder="Fullname Required"><br>
+			<input class="login-field" type="text" name="email" placeholder="Email Required"><br>
+			<input class="login-field" type="password" placeholder="Password" name="password"><br>
+			<button id="register-button">Register</button><br>
+			<% if (message) {%>
+				<p id="already-registered">Already Registered! <a href="/user/login">Click here to login</a></p>
+			<% } %>
+		</form>
+	</main>
 </body>
 </html>
