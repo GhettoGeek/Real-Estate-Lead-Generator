@@ -1,7 +1,17 @@
-<nav>
-	<a href="/home/3">home3</a>
-	<a href="/home/4">home4</a>
-	<a href="/home/5">home5</a>
-	<a href="/user/logout">log out</a>
-	<%= username %>
+<nav class="topnav" id="myTopnav">
+    <a href="#">logo</a>
+    <a href="/user/home">home4</a>
+	<a href="/home">Property Search</a>
+	<a href="/user/logout">Logout</a>
+	<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </nav>
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>

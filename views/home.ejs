@@ -1,16 +1,21 @@
+<!--  Future: add search by state, city  -->
 <html>
 	<head>
 		<title>Search Page</title>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
+	<% if (signedIn) { %>
+		<%include ./partials/header.ejs %>
+	<% } %>
+
 <body>
 	<main class="main">
 		<h1>PROPERTY SEARCH</h1>
 		<form class="form" action="/home" method="POST">
 			<div>neighborhood</div>
-			<div>min-beds</div>
-			<div>max-beds</div>
+			<div>min-bedrooms</div>
+			<div>max-bedrooms</div>
 			<select class="select-field" name="neighborhood">
 				<option value="old-town">Old Town</option>
 				<option value="printers-row">Printers Row</option>
@@ -32,7 +37,6 @@
 				<option value="5">5</option>
 			</select>
 			<button id="register-button">Search</button><br>
-			<p id="already-registered">Invalid zip code, try again!</p>
 		</form>
 	</main>
 </body>

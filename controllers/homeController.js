@@ -4,10 +4,10 @@ const User = require('../models/user.js');
 
 router.route('/')
 	.get((req,res)=>{
-		// res.redirect('/partial/0'); // Cool thing u can do
-		res.render('home.ejs')
+		res.render('home.ejs',{signedIn: req.session.loggedIn})
 	})
-	.post((req,res)=>{
+	.post((req,res)=>{ // Query
+
 		console.log(req.body)
 	})
 

@@ -53,6 +53,9 @@ table {
 @error-text: red;
 @background-color: #09152A;
 @accent-color-1: #4717F6;
+@accent-color-2: #1ddacf;
+@accent-color-3: #AA56FF;
+@accent-color-4: #faff00;
 
 body {
 	background-color: @background-color;
@@ -132,3 +135,41 @@ button {
 	font-size: 1em;
 	color: #12397a;
 }
+
+
+.topnav {
+  overflow: hidden;
+  box-shadow: 0px 10px 50px black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: @accent-color-1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 3em;
+}
+
+.topnav a:hover {
+  color: @accent-color-2;
+}
+
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
