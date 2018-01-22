@@ -16,6 +16,9 @@
       <% for (let i = 0; i < agents.length; i++) { -%>
       	<ul><li>
               <a href="/<%=agents[i].id%>" title=""><%=agents[i].fullname%></a>
+                  <form action="/<%= user %>?_method=PUT" method="POST">
+			      	<button>Select Agent</button>
+			      </form>
       <% } -%>
       </li></ul>
     </section>

@@ -1,12 +1,14 @@
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-const session = require('express-session');
-const port = 4100;
+const 	express = require('express'), 
+		app = express(),	
+		bodyParser = require('body-parser'),
+		session = require('express-session'),
+		methodOverride = require('method-override'),
+		port = 4100;
 
 // db
 require('./db/db.js')
 // middleware
+app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(session({
