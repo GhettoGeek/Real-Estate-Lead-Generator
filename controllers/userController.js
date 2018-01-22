@@ -107,6 +107,7 @@ router.route('/register')
 
 router.get('/users', (req, res) => {
 	User.find({}, (err, foundUsers) => {
+		console.log(allUsers, 'foundUsers')
 		res.render('listOfUsers.ejs', {
 				users:foundUsers
 		})
