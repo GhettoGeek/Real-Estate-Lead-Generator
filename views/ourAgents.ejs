@@ -9,13 +9,15 @@
 
 <body>
 	<main class="main">
-		<h1>Profile</h1>
+		<h1>Our Agents</h1>
 
 
 	<section>
-      <% for (let i = 0; i < agent.length; i++) { -%>
-              <a href="/articles/<%=agent[i].id%>" title=""><%=agent[i].title%></a>
+      <% for (let i = 0; i < agents.length; i++) { -%>
+      	<ul><li>
+              <a href="/<%=agents[i].id%>" title=""><%=agents[i].fullname%></a>
       <% } -%>
+      </li></ul>
     </section>
 
 	</main>
