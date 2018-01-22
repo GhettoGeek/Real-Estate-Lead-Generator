@@ -4,6 +4,7 @@
 		<title>Search Page</title>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	</head>
 	<!-- <% if (signedIn) { %> -->
 		<%include ./partials/header.ejs %>
@@ -17,19 +18,18 @@
 			<div>min-bedrooms</div>
 			<div>max-bedrooms</div>
 			<select class="select-field" name="neighborhood">
-				<option value="old-town">Old Town</option>
-				<option value="printers-row">Printers Row</option>
-				<option value="west-loop">West Loop</option>
-				<option value="lincoln-park">Lincoln Park</option>
+				<option value="oldtown">Old Town</option>
+				<option value="printersrow">Printers Row</option>
+				<option value="westloop">West Loop</option>
 			</select>
-			<select class="select-field" name="min-beds">
+			<select class="select-field" name="min">
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
 				<option value="4">4</option>
 				<option value="5">5</option>
 			</select>
-			<select class="select-field" name="max-beds">
+			<select class="select-field" name="max">
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>

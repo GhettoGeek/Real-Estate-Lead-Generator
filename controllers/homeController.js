@@ -1,14 +1,16 @@
 const	express = require('express'),
 		router = express.Router(),
 		User = require('../models/userModel.js');
+const Homes = require('../models/homes.js');
 
 router.route('/')
 	.get((req,res)=>{
 		res.render('home.ejs',{signedIn: req.session.loggedIn})
 	})
-	.post((req,res)=>{ // Query
-
-		console.log(req.body)
+	.post((req,res)=>{
+		Homes.find({$and:[{neighborhood: req.body.neighborhood},{bedrooms: { $gte: req.body.min }},{bedrooms: { $lte: req.body.max }}]},(err,foundHomes) => {
+			console.log(foundHomes);
+		});
 	})
 
 router.route('/:id')
