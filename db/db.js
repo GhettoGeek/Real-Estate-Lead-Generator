@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const Homes = require('../models/homes.js');
+// const dummyData = require('../models/dummydata.js');
 
 mongoose.connect('mongodb://localhost:27017/realestates');
 
@@ -13,3 +15,9 @@ mongoose.connection.on('disconnected', () => {
 mongoose.connection.on('error', () => {
 	console.log('there was an error connecting', error);
 })
+
+// Homes.collection.insertMany(dummyData,(err, data) => {
+//     console.log("added provided vampire data");
+//     console.log(data);
+//     mongoose.connection.close();
+// });

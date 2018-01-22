@@ -15,7 +15,6 @@ app.use(session({
 }))
 
 // controllers
-
 const UserController = require('./controllers/userController.js');
 app.use('/user/', UserController);
 
