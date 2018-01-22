@@ -84,9 +84,6 @@ router.route('/register')
 			}
 		})
 	})
-
-
-
 // --------> temp show all users page
 
 router.get('/users', (req, res) => {

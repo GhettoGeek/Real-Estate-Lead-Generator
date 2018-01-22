@@ -17,15 +17,25 @@ router.route('/')
 			})
 		})
 	})
-
+router.route('/profile/:id')
+	.post((req,res)=>{
+		console.log('POST WORKS')
+		// Homes.findById(req.params.id, (err,foundHome)=>{
+		// 	console.log(foundHome)
+		// })
+	})
+	
 router.route('/:id')
 	.get((req,res)=>{
-		// res.render('home.ejs',{
-		// 	page: req.params.id,
-		// 	username: req.session.username
-		// })
-		res.send('working')
+		// console.log(req.params.id)
+		Homes.findById(req.params.id,(err,foundHome)=>{
+			res.render('show.ejs',{
+				home: foundHome
+			// username: req.session.username
+			})
+		})
 	})
+
 
 
 module.exports = router;

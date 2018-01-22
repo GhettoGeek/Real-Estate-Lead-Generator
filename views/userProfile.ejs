@@ -1,23 +1,23 @@
-<!--  Future: add search by state, city  -->
 <html>
 	<head>
 		<title>Profile</title>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
-		<%include ./partials/header.ejs %>
-
+	<%include ./partials/header.ejs %>
 <body>
 	<main class="main">
 		<h1>Profile</h1>
-
-
-	<section>
-      <% for (let i = 0; i < agent.length; i++) { -%>
-              <a href="/articles/<%=agent[i].id%>" title=""><%=agent[i].title%></a>
-      <% } -%>
-    </section>
-
+		<section>
+			<h1>Requested Showings</h1>
+	      <% for (let i = 0; i < requested.length; i++) { %>
+	             <a href="/home/<%=requested[i].id%>">
+	             	<h3><%=requested[i].neighborhood%></h3>
+	             	<h3><%=requested[i].address%></h3>
+	             	<h3><%=requested[i].address2%></h3>
+	             </a>
+	      <% } %>
+	    </section>
 	</main>
 </body>
 </html>

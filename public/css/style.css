@@ -231,6 +231,9 @@ button {
 input::placeholder {
   color: #444444;
 }
+.home-details {
+  width: 100%;
+}
 /*------> Navagation <------*/
 .topnav {
   overflow: hidden;
