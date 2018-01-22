@@ -4,15 +4,16 @@
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
+	<%include ./partials/header.ejs %>
 <body>
 	<main class="main">
-		<h1>L O G I N</h1>
-		<form class="form" action="/user/login" method="POST">
+		<h1>LOGIN</h1>
+		<form class="form" action="/login" method="POST">
 			<input class="login-field" type="text" name="email" placeholder="Email"><br>
 			<input class="login-field" type="password" placeholder="Password" name="password"><br>
 			<button>Login</button><br>
 			<% if (message) { %>
-				<p id"login-error-notice"><%=message%></p>
+				<p id="login-error-notice"><%=message%></p>
 			<% } %>
 			<p id="already-registered">Need an account? Sign up <a href="/user/register">here</a></p>
 		</form>

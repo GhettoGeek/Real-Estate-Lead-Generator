@@ -1,12 +1,13 @@
-const express = require('express');
-const router = express.Router();
-const User = require('../models/user.js');
-const bcrypt = require('bcrypt');
+const	express = require('express'),
+		router = express.Router(),
+		User = require('../models/userModel.js'),
+		Agent = require('../models/agentModel.js'),
+		bcrypt = require('bcrypt');
 
-router.route('/')
-	.get((req,res)=>{
-		res.render('mobileRegister.ejs')
-	})
+// router.route('/')
+// 	.get((req,res)=>{
+// 		res.render('mobileRegister.ejs')
+// 	})
 
 router.route('/login')
 	.get((req,res)=>{
@@ -15,24 +16,36 @@ router.route('/login')
 		})
 	})
 	.post((req,res)=>{
-		User.findOne({email: req.body.email}, (err,userFound)=>{
+		
+		User.findOne({email: req.body.email}, (err,userFound)=>{/// check user collecion 
 			if (userFound){
 				//compare passwords
 				if (bcrypt.compareSync(req.body.password, userFound.password)) {
 					req.session.email = req.body.email;
 					req.session.loggedIn = true;
-
-					if (req.session.message){
-						delete req.session.message
-					}
 					res.redirect('/home')
 				} else { // passwords didnt match
 					req.session.message = "Incorrect email or password";
-					res.redirect('/user/login');
+					res.redirect('/login');
 				}
 			} else {
-				req.session.message = "Incorrect email or password";
-				res.redirect('/user/login');
+				Agent.findOne({email: req.body.email}, (err,userFound)=>{// check agent collection
+				if (userFound){
+					//compare passwords
+					if (bcrypt.compareSync(req.body.password, userFound.password)) {
+						req.session.email = req.body.email;
+						req.session.loggedIn = true;
+
+						res.redirect('/home')
+					} else { // passwords didnt match
+						req.session.message = "Incorrect email or password";
+						res.redirect('/login');
+					}
+				} else {
+					req.session.message = "Incorrect email or password";
+					res.redirect('/login');
+				}
+			})
 			}
 		})
 	})
@@ -67,9 +80,57 @@ router.route('/register')
 			if (err){
 				res.render('register.ejs',{message: true});
 			} else {
-				res.redirect('/user/login');
+				res.redirect('/login');
 			}
 		})
 	})
 
+
+//----------> who is your agent? userProfile page
+
+// router.get('/:id/profile', (req, res) => {
+
+//   User.findById(req.params.id, (err, foundUser) => {
+//     if(err) console.log(err);
+//     Agent.find({}, (err,allAuthors) => {
+//       agent.findeOne({'agent._id' : req.params.id}, (err,  foundArticleAgent) => {
+//          res.render('/userProfile.ejs', {  	user: foundUser,
+//                                             agents: allAgents,
+//                                             agent: foundArticleAgent
+//                                                         });
+//       })
+//     })
+//   })
+// })
+
+// --------> temp show all users page
+
+router.get('/users', (req, res) => {
+	User.find({}, (err, foundUsers) => {
+		res.render('listOfUsers.ejs', {
+				users:foundUsers
+		})
+	})
+})
+
+
+
+
 module.exports  = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
