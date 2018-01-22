@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Property Query</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<% if (signedIn) { %>
+	<%include ./partials/header.ejs %>
+<% } %>
+<body>
+	<% for (let i = 0; i < homes.length; i++) { %>
+		<a href="home/<%= homes[i].id %>">
+			<div class="show-images">
+				<img class="showmany-img" src="<%= homes[i].img %>">
+				<h1 class="showmany-h1"><%= homes[i].address %></h1>
+			</div>
+		</a>
+	<% } %>
+</body>
+</html>
