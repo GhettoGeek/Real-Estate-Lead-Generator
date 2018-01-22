@@ -86,33 +86,34 @@ router.route('/register')
 	})
 
 
-//----------> who is your agent? userProfile page
-
-// router.get('/:id/profile', (req, res) => {
-
-//   User.findById(req.params.id, (err, foundUser) => {
-//     if(err) console.log(err);
-//     Agent.find({}, (err,allAuthors) => {
-//       agent.findeOne({'agent._id' : req.params.id}, (err,  foundArticleAgent) => {
-//          res.render('/userProfile.ejs', {  	user: foundUser,
-//                                             agents: allAgents,
-//                                             agent: foundArticleAgent
-//                                                         });
-//       })
-//     })
-//   })
-// })
 
 // --------> temp show all users page
 
 router.get('/users', (req, res) => {
 	User.find({}, (err, foundUsers) => {
-		console.log(allUsers, 'foundUsers')
+		console.log(foundUsers, 'foundUsers')
 		res.render('listOfUsers.ejs', {
 				users:foundUsers
 		})
 	})
 })
+
+//----------> who is your agent? userProfile page
+
+// router.get('/:id', (req, res) => {
+
+//   User.findById(req.params.id, (err, foundUser) => {
+//     if(err) console.log(err);
+//     Agent.find({}, (err,allAgents) => {
+//       Agent.findOne({'agent._id' : req.params.id}, (err,  foundAgent) => {
+//          res.render('userProfile.ejs', {  	user: foundUser,
+//                                             agents: allAgents,
+//                                             agent: foundAgent
+//                                                         });
+//       })
+//     })
+//   })
+// })
 
 
 
