@@ -1,0 +1,23 @@
+<!--  Future: add search by state, city  -->
+<html>
+	<head>
+		<title>Profile</title>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	</head>
+		<%include ./partials/header.ejs %>
+
+<body>
+	<main class="main">
+		<h1>Profile</h1>
+
+
+	<section>
+      <% for (let i = 0; i < agent.length; i++) { -%>
+              <a href="/articles/<%=agent[i].id%>" title=""><%=agent[i].title%></a>
+      <% } -%>
+    </section>
+
+	</main>
+</body>
+</html>

@@ -4,10 +4,11 @@
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
+	<%include ./partials/header.ejs %>
 <body>
 	<main class="main">
-		<h1>R E G I S T R A T I O N</h1>
-		<form class="form" action="/user/register" method="POST">
+		<h1>REGISTRATION</h1>
+		<form class="form" action="/register" method="POST">
 			<% if (message) {%>
 				<p id="registration-error-notice">You already have an account!</p>
 			<% } %>
@@ -15,7 +16,7 @@
 			<input class="login-field" type="text" name="email" placeholder="Email Required"><br>
 			<input class="login-field" type="password" placeholder="Password" name="password"><br>
 			<button>Register</button><br>
-			<p id="already-registered">Already have an account? <a href="/user/login">login here</a></p>
+			<p id="already-registered">Already have an account? <a href="/login">login here</a></p>
 		</form>
 	</main>
 </body>

@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const port = 4100;
 
 // db
 require('./db/db.js')
@@ -16,7 +17,10 @@ app.use(session({
 
 // controllers
 const UserController = require('./controllers/userController.js');
-app.use('/user/', UserController);
+app.use('/', UserController);
+
+const AgentController = require('./controllers/agentController.js');
+app.use('/', AgentController);
 
 const HomeController = require('./controllers/homeController.js');
 app.use('/home/', HomeController);
@@ -25,6 +29,6 @@ app.get('*',(req,res)=>{
 	res.status(404).send('404')
 })
 
-app.listen(4100,()=>{
-	console.log('listening on 4100');
+app.listen(port,()=>{
+	console.log('listening on ' + port);
 })
