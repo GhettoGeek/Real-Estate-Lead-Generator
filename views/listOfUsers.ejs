@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
-  <link rel="stylesheet" href="">
+  <%include ./partials/head.ejs %>
 </head>
 <body>
   <main>
@@ -13,6 +13,7 @@
       <% for(let i =0; i < users.length; i++){ %>
         <li>
           <a href="/<%= users[i]._id%>"><%= users[i].fullname %></a>
+
         </li>
       <%}%>
     </ul>
