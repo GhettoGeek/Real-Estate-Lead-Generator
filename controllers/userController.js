@@ -95,22 +95,24 @@ router.get('/users', (req, res) => {
 	})
 })
 
-//----------> who is your agent? userProfile page
+//----------> who is your agent page
 
-// router.get('/:id', (req, res) => {
+router.get('/:id', (req, res) => {
 
-//   User.findById(req.params.id, (err, foundUser) => {
-//     if(err) console.log(err);
-//     Agent.find({}, (err,allAgents) => {
-//       Agent.findOne({'agent._id' : req.params.id}, (err,  foundAgent) => {
-//          res.render('userProfile.ejs', {  	user: foundUser,
-//                                             agents: allAgents,
-//                                             agent: foundAgent
-//                                                         });
-//       })
-//     })
-//   })
-// })
+  User.findById(req.params.id, (err, foundUser) => {
+    if(err) console.log(err);
+ 
+    Agent.find({}, (err, allAgents) => {
+      // Agent.findOne({'agent._id' : req.params.id}, (err,  foundAgent) => {
+         res.render('ourAgents.ejs', {  	user: foundUser,
+                                            agents: allAgents,
+                                            //agent: foundAgent
+                                                        });
+         
+      })
+    })
+  })
+//})
 
 
 
