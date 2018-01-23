@@ -17,24 +17,29 @@ router.route('/')
 			})
 		})
 	})
-router.route('/profile/:id')
-	.post((req,res)=>{
-		console.log('POST WORKS')
-		// Homes.findById(req.params.id, (err,foundHome)=>{
-		// 	console.log(foundHome)
-		// })
-	})
 	
 router.route('/:id')
 	.get((req,res)=>{
 		// console.log(req.params.id)
 		Homes.findById(req.params.id,(err,foundHome)=>{
 			res.render('show.ejs',{
-				home: foundHome
+				home: foundHome,
+				signedIn: req.session.loggedIn
 			// username: req.session.username
 			})
 		})
 	})
+	.post((req,res)=>{
+		// const request = {
+		// 	propertyId: req.params.id,
+		// 	userId: String,
+		// 	created: Date,
+		// 	accepted: false,
+		// 	completed: false
+		// }
+		console.log(req.session.email);
+	})
+
 
 
 

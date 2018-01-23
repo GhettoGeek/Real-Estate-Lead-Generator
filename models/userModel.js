@@ -1,7 +1,7 @@
 const 	mongoose = require('mongoose'),
 		Schema = mongoose.schema,
 		Agent = require('./agentModel.js'),
-		Home = require('./homes.js')
+		Request = require('./requestModel.js')
 
 
 const userSchema = new mongoose.Schema({
@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
 	password: {type: String, required: true},
 	fullname: {type: String, required: true},
 	idArray: [String],
-	requestedProperties: [Home.schema],
+	requestedProperties: [Request.schema],
 	agent: [Agent.schema]
 
 })

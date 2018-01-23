@@ -4,11 +4,6 @@ const	express = require('express'),
 		Agent = require('../models/agentModel.js'),
 		bcrypt = require('bcrypt');
 
-// router.route('/')
-// 	.get((req,res)=>{
-// 		res.render('mobileRegister.ejs')
-// 	})
-
 router.route('/login')
 	.get((req,res)=>{
 		res.render('login.ejs', {
@@ -16,7 +11,6 @@ router.route('/login')
 		})
 	})
 	.post((req,res)=>{
-		
 		User.findOne({email: req.body.email}, (err,userFound)=>{/// check user collecion 
 			if (userFound){
 				//compare passwords
@@ -87,6 +81,8 @@ router.route('/register')
 
 
 // YOUR CODE KEPT BREAKING THE BUILD LEAVE IT COMMENTED OUT UNTIL YOUR READY TO WORK ON IT -Sergio
+// Dont play around in the master branch, if you need to work in any code that already 
+// functions properly please create a new branch first and only add your changes once you know its going to work
 
 // --------> temp show all users page
 
