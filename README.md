@@ -1,7 +1,7 @@
 ## Real Estate Lead Generator
 
 ## What problem does it solve
-The app functions as a lead generator for real estate agents. 
+The app functions as a lead generator for real estate agents. It helps users connect with real estate agents.
 
 ## User Stories
 
@@ -19,13 +19,14 @@ The app functions as a lead generator for real estate agents.
 
 ## Wireframes
 
+![alt text](./imgs/loginFrame.png "Logo Title Text 1")
 <div>
-	<div style="display: inline-block"><h3>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
-	<div style="display: inline-block"><h3>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
-	<div style="display: inline-block"><h3>Search</h1><img height="300" width="150" src="./imgs/searchFrame.png"></div>
-	<div style="display: inline-block"><h3>List of properties</h1><img height="300" width="150" src="./imgs/showPropertiesFrame.png"></div>
-	<div style="display: inline-block"><h3>Individual property</h1><img height="300" width="150" src="./imgs/showIndividualPropertyFrame.png"></div>
-	<div style="display: inline-block"><h3>Mobile Menu</h1><img height="300" width="150" src="./imgs/mobileMenuFrame.png"></div>
+	<div><h3>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
+	<div><h3>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
+	<div><h3>Search</h1><img height="300" width="150" src="./imgs/searchFrame.png"></div>
+	<div><h3>List of properties</h1><img height="300" width="150" src="./imgs/showPropertiesFrame.png"></div>
+	<div><h3>Individual property</h1><img height="300" width="150" src="./imgs/showIndividualPropertyFrame.png"></div>
+	<div><h3>Mobile Menu</h1><img height="300" width="150" src="./imgs/mobileMenuFrame.png"></div>
 </div>
 
 ## Technologies Used
