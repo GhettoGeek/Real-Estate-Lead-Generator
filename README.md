@@ -13,8 +13,6 @@ The app functions as a lead generator for real estate agents.
 
 * As a _person trying to purchase property_, I want to be able to view a list of all my pending requests for a showing.
 
-* As a _person trying to purchase property_, I want to be able to cancel a pending request for a showing.
-
 * As a _real estate agent_ I should be able to view all the pending requests for a showing of a property.
 
 * As a _real estate agent_ I should be able to pick up requests for showing. 
@@ -31,6 +29,10 @@ The app functions as a lead generator for real estate agents.
 </div>
 
 ## Technologies Used
+* <a href="https://nodejs.org/en/">Node.js</a> - The runtime environment used to create my server.
+* <a href="https://expressjs.com/">Express.js</a> - The framework used to create my server
+* <a href="https://www.mongodb.com/">mongoDB</a> - The NoSQL database used to store the applications data.
+* <a href="http://mongoosejs.com/">mongoosejs</a> - Serves to model my data in my database.
 
 ## Requirements for install/use
 
