@@ -20,12 +20,12 @@ The app functions as a lead generator for real estate agents.
 ## Wireframes
 
 <div>
-	<div><h3>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
-	<div><h3>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
-	<div><h3>Search</h1><img height="300" width="150" src="./imgs/searchFrame.png"></div>
-	<div><h3>List of properties</h1><img height="300" width="150" src="./imgs/showPropertiesFrame.png"></div>
-	<div><h3>Individual property</h1><img height="300" width="150" src="./imgs/showIndividualPropertyFrame.png"></div>
-	<div><h3>Mobile Menu</h1><img height="300" width="150" src="./imgs/mobileMenuFrame.png"></div>
+	<div style="display: inline-block"><h3>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
+	<div style="display: inline-block"><h3>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
+	<div style="display: inline-block"><h3>Search</h1><img height="300" width="150" src="./imgs/searchFrame.png"></div>
+	<div style="display: inline-block"><h3>List of properties</h1><img height="300" width="150" src="./imgs/showPropertiesFrame.png"></div>
+	<div style="display: inline-block"><h3>Individual property</h1><img height="300" width="150" src="./imgs/showIndividualPropertyFrame.png"></div>
+	<div style="display: inline-block"><h3>Mobile Menu</h1><img height="300" width="150" src="./imgs/mobileMenuFrame.png"></div>
 </div>
 
 ## Technologies Used
@@ -37,7 +37,7 @@ The app functions as a lead generator for real estate agents.
 * <a href="http://lesscss.org/">Less.js</a> - Used as a pre proccessor to extend the capabilities of my css code.
 * <a href="https://www.npmjs.com/package/bcrypt">bcrypt</a> - Used to add a layer of security to the users accounts
 * <a href="http://ejs.co/">ejs</a> - Used as a templating language to create the application's pages
-* <a href="https://github.com/expressjs/session">express-session</a> - Middleware/coockie used to track the users session 
+* <a href="https://github.com/expressjs/session">express-session</a> - Middleware/cookie used to track the users session 
 * <a href="https://github.com/expressjs/body-parser">body-parser</a> - Middleware for parsing incoming request bodies 
 * <a href="https://github.com/expressjs/method-override">method-override</a> - Middleware used to override HTTP Verbs
 * <a href="https://en.wikipedia.org/wiki/HTML">HTML5</a> - Front end technology used to create the basic layout of each web page
@@ -45,11 +45,3 @@ The app functions as a lead generator for real estate agents.
 
 ## Requirements for install/use
 
-## upcoming features
-
-## about the app 
-Creates mutual trust between client and agent
-Allows clients to search for a property within the agents working areas.
-Simplifies the process of finding homes the user is interested in by working directly with the agent. 
-Allows clients to send a request for a property showing.
-Allows clients to send a request for purchase of chosen property.
