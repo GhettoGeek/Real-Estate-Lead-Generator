@@ -19,7 +19,10 @@ The app functions as a lead generator for real estate agents. It helps users con
 
 ## Wireframes
 
+![alt text](./imgs/loginFrame.png "Logo Title Text 1");
+![alt text](./imgs/loginFrame.png "Logo Title Text 1");
 ![alt text](./imgs/loginFrame.png "Logo Title Text 1")
+
 <div>
 	<div><h3>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
 	<div><h3>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
