@@ -1,7 +1,7 @@
 ## Real Estate Lead Generator
 
 ## What problem does it solve
-The app functions as a lead generator for real estate agents. It helps users connect with real estate agents.
+The app functions as a lead generator for real estate agents and it simplifies the process of viewing/visiting properties a potential buyer is interested in.
 
 ## User Stories
 
@@ -18,6 +18,11 @@ The app functions as a lead generator for real estate agents. It helps users con
 * As a _real estate agent_ I should be able to pick up requests for showing. 
 
 ## Wireframes
+
+Register                   |  Log In
+:-------------------------:|:-------------------------:
+![](./imgs/registerFrame.png)  |  ![](./imgs/loginFrame.png)
+
 <div>
 	<div><h3>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
 	<div><h3>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
