@@ -27,9 +27,13 @@ Search                     |  List of properties
 :-------------------------:|:-------------------------:
 ![](./imgs/searchFrame.png)|  ![](./imgs/showPropertiesFrame.png)
 
-Property Show Page         |  List of properties
+Property Show Page         |  Mobile Hamburger Menu
 :-------------------------:|:-------------------------:
 ![](./imgs/showIndividualPropertyFrame.png)|  ![](./imgs/mobileMenuFrame.png)
+
+User profile page         |  Agents request view page
+:-------------------------:|:-------------------------:
+![](./imgs/showrequests.png)|  ![](./imgs/xhowagentrequests.png)
 
 ## Technologies Used
 * <a href="https://nodejs.org/en/">Node.js</a> - The runtime environment used to create my server.
