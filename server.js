@@ -19,13 +19,14 @@ app.use(session({
 
 // controllers
 const UserController = require('./controllers/userController.js');
-app.use('/', UserController);
-
-const AgentController = require('./controllers/agentController.js');
-app.use('/', AgentController);
+app.use('/user/', UserController);
 
 const HomeController = require('./controllers/homeController.js');
 app.use('/home/', HomeController);
+
+app.get('/',(req,res)=>{
+	res.redirect('/user/login');
+})
 
 app.get('*',(req,res)=>{
 	res.status(404).send('404')

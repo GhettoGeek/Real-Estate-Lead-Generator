@@ -1,17 +1,16 @@
-<html>
+<!-- <html>
 	<head>
 		<title>Profile</title>
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
-	<%include ./partials/header.ejs %>
 <body>
 	<main class="main">
 <<<<<<< HEAD:views/userProfile.ejs
 		<h1>Profile</h1>
 		<section>
 			<h1>Requested Showings</h1>
-	      <% for (let i = 0; i < requested.length; i++) { %>
+	     
 	             <a href="/home/<%=requested[i].id%>">
 	             	<h3><%=requested[i].neighborhood%></h3>
 	             	<h3><%=requested[i].address%></h3>
@@ -24,7 +23,7 @@
 
 
 	<section>
-      <% for (let i = 0; i < agents.length; i++) { -%>
+      
       	<ul><li>
               <a href="/<%=agents[i].id%>" title=""><%=agents[i].fullname%></a>
                   <form action="/<%= user %>?_method=PUT" method="POST">
@@ -37,4 +36,4 @@
 >>>>>>> 8b31c11b6967361390501c9933345baed2473213:views/ourAgents.ejs
 	</main>
 </body>
-</html>
+</html> -->

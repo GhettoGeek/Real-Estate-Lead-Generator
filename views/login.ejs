@@ -7,14 +7,14 @@
 <body>
 	<main class="main">
 		<h1>LOGIN</h1>
-		<form class="form" action="/login" method="POST">
+		<form class="form" action="/user/login" method="POST">
 			<input class="login-field" type="text" name="email" placeholder="Email"><br>
 			<input class="login-field" type="password" placeholder="Password" name="password"><br>
 			<button>Login</button><br>
 			<% if (message) { %>
 				<p id="login-error-notice"><%=message%></p>
 			<% } %>
-			<p id="already-registered">Need an account? Sign up <a href="/register">here</a></p>
+			<p id="already-registered">Need an account? Sign up <a href="/user/register">here</a></p>
 		</form>
 	</main>
 </body>
