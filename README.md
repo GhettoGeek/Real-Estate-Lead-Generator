@@ -23,14 +23,13 @@ Register                   |  Log In
 :-------------------------:|:-------------------------:
 ![](./imgs/registerFrame.png)  |  ![](./imgs/loginFrame.png)
 
-<div>
-	<div><h3>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
-	<div><h3>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
-	<div><h3>Search</h1><img height="300" width="150" src="./imgs/searchFrame.png"></div>
-	<div><h3>List of properties</h1><img height="300" width="150" src="./imgs/showPropertiesFrame.png"></div>
-	<div><h3>Individual property</h1><img height="300" width="150" src="./imgs/showIndividualPropertyFrame.png"></div>
-	<div><h3>Mobile Menu</h1><img height="300" width="150" src="./imgs/mobileMenuFrame.png"></div>
-</div>
+Search                     |  List of properties
+:-------------------------:|:-------------------------:
+![](./imgs/searchFrame.png)|  ![](./imgs/showPropertiesFrame.png)
+
+Property Show Page         |  List of properties
+:-------------------------:|:-------------------------:
+![](./imgs/showIndividualPropertyFrame.png)|  ![](./imgs/mobileMenuFrame.png)
 
 ## Technologies Used
 * <a href="https://nodejs.org/en/">Node.js</a> - The runtime environment used to create my server.
