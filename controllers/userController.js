@@ -20,7 +20,7 @@ router.route('/login')
 					res.redirect('/home')
 				} else { // passwords didnt match
 					req.session.message = "Incorrect email or password";
-					res.redirect('/login');
+					res.redirect('/user/login');
 				}
 			} else {
 				Agent.findOne({email: req.body.email}, (err,userFound)=>{// check agent collection
@@ -33,11 +33,11 @@ router.route('/login')
 						res.redirect('/home')
 					} else { // passwords didnt match
 						req.session.message = "Incorrect email or password";
-						res.redirect('/login');
+						res.redirect('/user/login');
 					}
 				} else {
 					req.session.message = "Incorrect email or password";
-					res.redirect('/login');
+					res.redirect('/user/login');
 				}
 			})
 			}
@@ -74,11 +74,21 @@ router.route('/register')
 			if (err){
 				res.render('register.ejs',{message: true});
 			} else {
-				res.redirect('/login');
+				res.redirect('/user/login');
 			}
 		})
 	})
 
+router.route('/profile')
+	.get((req,res)=>{
+		User.findOne({email: req.session.email},(err,found)=>{
+			res.render('userProfile.ejs',{
+				requests: found.requestedProperties,
+				signedIn: req.session.loggedIn
+			})
+		})
+		
+	})
 
 // YOUR CODE KEPT BREAKING THE BUILD LEAVE IT COMMENTED OUT UNTIL YOUR READY TO WORK ON IT -Sergio
 // Dont play around in the master branch, if you need to work in any code that already 

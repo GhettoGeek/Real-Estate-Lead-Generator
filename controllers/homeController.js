@@ -19,7 +19,8 @@ router.route('/')
 			})
 		})
 	})
-	
+
+
 router.route('/:id')
 	.get((req,res)=>{
 		Homes.findById(req.params.id,(err,foundHome)=>{
@@ -35,16 +36,25 @@ router.route('/:id')
 			// Create a request to view the home
 			const showingRequest = {
 				propertyId: req.params.id,
+				propertyAddress: req.body.address,
 				userId: found.id,
 				created: new Date(),
 				accepted: false,
-				completed: false
+				completed: false,
+				requestedDate: req.body.date
 			}
 			Request.create(showingRequest,(err,created)=>{
 				// Push the created request into the users list of requests
 				found.requestedProperties.push(created);
 				// Save the changed user
-				found.save((err)=>{if (err) return handleError(err)});
+				found.save((err)=>{
+					if (err) {
+						return handleError(err)
+					} else {
+						console.log(created)
+						res.redirect('/user/profile')
+					}
+				});
 			})
 		})
 	})
