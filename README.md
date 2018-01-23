@@ -18,11 +18,6 @@ The app functions as a lead generator for real estate agents. It helps users con
 * As a _real estate agent_ I should be able to pick up requests for showing. 
 
 ## Wireframes
-
-![alt text](./imgs/loginFrame.png "Logo Title Text 1");
-![alt text](./imgs/loginFrame.png "Logo Title Text 1");
-![alt text](./imgs/loginFrame.png "Logo Title Text 1")
-
 <div>
 	<div><h3>Log In</h1><img height="300" width="150" src="./imgs/loginFrame.png"></div>
 	<div><h3>Register</h1><img height="300" width="150" src="./imgs/registerFrame.png"></div>
@@ -48,4 +43,8 @@ The app functions as a lead generator for real estate agents. It helps users con
 * <a href="https://www.javascript.com/">javscript</a> - Programming language used for most of the apps functionality
 
 ## Requirements for install/use
-
+App is available <a href="#">HERE</a><br>
+Recommended desktop browsers<br>
+* google chrome
+* safari
+* firefox
