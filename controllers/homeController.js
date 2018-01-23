@@ -5,8 +5,9 @@ const Homes = require('../models/homes.js');
 const Request = require('../models/requestModel.js');
 
 router.route('/')
+	// Render the search page for the user
 	.get((req,res)=>{
-		res.render('home.ejs',{signedIn: req.session.loggedIn})
+		res.render('search.ejs',{signedIn: req.session.loggedIn})
 	})
 	.post((req,res)=>{
 		// Finds all the homes that match the users options
