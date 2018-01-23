@@ -1,16 +1,23 @@
+## Real Estate Lead Generator
+
 ## What problem does it solve
-Provides an interface for customer and agent interaction.
+The app functions as a lead generator for real estate agents. 
 
 ## User Stories
-* User should be able to create an account
-* User should be able to log in to the application
-* User (client) should be able to search for a property based on a zip code query 
-* User (client) should be able to request a showing of the chosen * property 
-* User (client) should be able to cancel request
-* User (client) should be able to rate agent and property
-* User (agent) should be able to view requested showings 
-* User (agent) should be able to reject or accept showing requests
 
+* As a _person trying to purchase property_, I want to be able to search for properties in a specific area so I can have many options to choose from.
+
+* As a _person trying to purchase property_, I want to see the details of the property that interests me.
+
+* As a _person trying to purchase property_, I want to be able to request a showing of the property I am interested in.
+
+* As a _person trying to purchase property_, I want to be able to view a list of all my pending requests for a showing.
+
+* As a _person trying to purchase property_, I want to be able to cancel a pending request for a showing.
+
+* As a _real estate agent_ I should be able to view all the pending requests for a showing of a property.
+
+* As a _real estate agent_ I should be able to pick up requests for showing. 
 
 ## Wireframes
 
