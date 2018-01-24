@@ -26,8 +26,6 @@ router.route('/')
 			{sqft: { $lte: parseInt(req.body.hiddenMaxSqft) }}
 
 							]},(err,foundHomes) => {
-								console.log(req.body)
-								console.log(foundHomes)
 			// Render a page showing all the found homes for the user
 			res.render('showmany.ejs',{
 
