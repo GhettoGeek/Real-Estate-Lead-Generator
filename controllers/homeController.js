@@ -7,7 +7,16 @@ const Request = require('../models/requestModel.js');
 router.route('/')
 	// Render the search page for the user
 	.get((req,res)=>{
-		res.render('search.ejs',{signedIn: req.session.loggedIn})
+		Homes.find({},(err, foundHouses) => {
+			res.render('search.ejs',{
+
+				houses: foundHouses,
+				signedIn: req.session.loggedIn,
+				neighborhood: req.body.neighborhood,
+				bedrooms: req.body.bedrooms,
+				bathrooms: req.body.bathrooms
+			})
+		})
 	})
 	.post((req,res)=>{
 		// Finds all the homes that match the users options
