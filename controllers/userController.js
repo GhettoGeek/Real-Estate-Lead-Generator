@@ -85,47 +85,11 @@ router.route('/profile')
 			res.render('userProfile.ejs',{
 				requests: found.requestedProperties,
 				signedIn: req.session.loggedIn
+				agent: false
 			})
 		})
 		
 	})
-
-// YOUR CODE KEPT BREAKING THE BUILD LEAVE IT COMMENTED OUT UNTIL YOUR READY TO WORK ON IT -Sergio
-// Dont play around in the master branch, if you need to work in any code that already 
-// functions properly please create a new branch first and only add your changes once you know its going to work
-
-// --------> temp show all users page
-
-// router.get('/users', (req, res) => {
-// 	User.find({}, (err, foundUsers) => {
-// 		console.log(foundUsers, 'foundUsers')
-// 		res.render('listOfUsers.ejs', {
-// 				users:foundUsers
-// 		})
-// 	})
-// })
-
-//----------> who is your agent page
-
-// router.get('/:id', (req, res) => {
-
-//   User.findById(req.params.id, (err, foundUser) => {
-//     if(err) console.log(err);
- 
-//     Agent.find({}, (err, allAgents) => {
-//       // Agent.findOne({'agent._id' : req.params.id}, (err,  foundAgent) => {
-//          res.render('ourAgents.ejs', {  	user: foundUser,
-//                                             agents: allAgents,
-//                                             //agent: foundAgent
-//                                                         });
-         
-//       })
-//     })
-//   })
-//})
-
-
-
 
 module.exports  = router;
 
