@@ -147,8 +147,17 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+h3 {
+  text-align: left;
+  margin: 20px;
+  font-size: 20px;
+  color: #aaaaaa;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 30px;
+}
 a {
-  color: #AA56FF;
+  color: #0fb8aF;
   text-decoration: none;
 }
 button {
@@ -266,14 +275,10 @@ input::placeholder {
   width: 100%;
 }
 /*------> Navagation <------*/
-.topnav {
-  overflow: hidden;
-  box-shadow: 0px 10px 50px black;
-}
 .topnav a {
   float: left;
   display: block;
-  color: #AA56FF;
+  color: #0fb8aF;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -283,7 +288,7 @@ input::placeholder {
   display: none;
 }
 .topnav a:hover {
-  color: #faff00;
+  color: #1fc8db;
 }
 .topnav a {
   display: none;
@@ -391,4 +396,18 @@ body {
 }
 .slideout-open .slideout-menu {
   display: block;
+}
+.toggle-button {
+  color: #ffffff;
+  height: 80;
+  width: 80px;
+  background: transparent;
+  font-size: 50px;
+  margin-top: 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  float: right;
+}
+.slideout-panel {
+  background-color: #434444;
 }

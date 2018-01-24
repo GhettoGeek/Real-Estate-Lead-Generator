@@ -54,8 +54,8 @@
 @background-color: #434444;
 @text-color-light: #aaaaaa; 
 @text-color-dark: #444444;
-@accent-color-1: #AA56FF;
-@accent-color-2: #faff00;
+@accent-color-1: #0fb8aF;
+@accent-color-2: #1fc8db;
 @gradient-color1:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 @translucent-background: rgba(196, 196, 196, 0.4);
 
@@ -87,6 +87,17 @@ h2 {
   color: @text-color-light;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+h3 {
+  text-align: left;
+  margin: 20px;
+  font-size: 20px;
+  color: @text-color-light;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 30px
+
 }
 
 a {
@@ -218,10 +229,7 @@ input::placeholder{
 
 
 /*------> Navagation <------*/
-.topnav {
-  overflow: hidden;
-  box-shadow: 0px 10px 50px black;
-}
+
 
 .topnav a {
   float: left;
@@ -365,4 +373,20 @@ body {
 
 .slideout-open .slideout-menu {
   display: block;
+}
+
+.toggle-button{
+    color: #ffffff;
+    height: 80;
+    width: 80px;
+    background: transparent;
+    font-size: 50px;
+     margin-top: 0px; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    float: right;
+}
+
+.slideout-panel {
+    background-color: #434444;
 }
