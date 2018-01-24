@@ -1,53 +1,53 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+     v2.0 | 20110126
+     License: none (public domain)
+  */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-	font-family: 'Montserrat', sans-serif;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/*End of Universal CSS Reset*/
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed, 
+  figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	font: inherit;
+  	vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure, 
+  footer, header, hgroup, menu, nav, section {
+  	display: block;
+  }
+  body {
+  	line-height: 1;
+  	font-family: 'Montserrat', sans-serif;
+  }
+  ol, ul {
+  	list-style: none;
+  }
+  blockquote, q {
+  	quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+  	content: '';
+  	content: none;
+  }
+  table {
+  	border-collapse: collapse;
+  	border-spacing: 0;
+  }
+// /*End of Universal CSS Reset*/
 
 @text: white;
 @error-text: red;
@@ -65,11 +65,11 @@ body {
 	color: @text;
 }
 div {
-	  width: 29%;
-   // border: 2.9px solid @accent-color-1;
-    display: inline-block;
-    text-align: center;
-    font-size: 1.2em;
+	  // width: 29%;
+   // // border: 2.9px solid @accent-color-1;
+   //  display: inline-block;
+   //  text-align: center;
+   //  font-size: 1.2em;
 }
 h1 {
 	text-align: center;
@@ -80,11 +80,31 @@ h1 {
   letter-spacing: 3px;
 }
 
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: @text-color-light;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
 a {
 	color: @accent-color-1;
 	text-decoration: none;
 }
-
+button {
+	color: @text-color-dark;
+	height: 40px;
+	width: 100%;
+	background: @gradient-color1;
+	border: none;
+	font-size: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
 /* login view */
 #login-error-notice{
@@ -172,18 +192,26 @@ button {
   background-position: center;
 }
 .select-field {
-	margin-bottom: 1em;
-  width: 29.65%;
+  margin-bottom: 1em;
+  width: 100%;
   height: 5%;
   border: none;
-  background-color: #10274f;
-  padding-left: 3%;
+  background-color: #848484;
   color: white;
-  font-size: 2.5em;
+  font-size: 25px;
+  line-height: 3;
+  text-transform: uppercase;
+  border-radius: 1px;
 }
 input::placeholder{
 	color:@text-color-dark;
 }
+
+
+
+
+
+
 .home-details {
   width: 100%;
 }
@@ -230,3 +258,111 @@ input::placeholder{
     display: block;
     text-align: left;
   }
+
+//--------> slider stuff
+
+.sliderContainer{
+  margin-bottom: 60px;
+}
+
+.min{
+  padding-top: 20px;
+  text-align: left;
+  width: 20px;
+  float: left;
+}
+.max{
+  padding-top: 20px;
+  text-align: right;
+  width: 20px;
+  float: right;
+}
+.noUi-connect {
+    background: @gradient-color1 !important;
+}
+
+
+.noUi-origin {
+    border-radius: 2px !important;
+}
+
+.noUi-background {
+    background: #848484 !important;
+    box-shadow: none;
+
+}
+.noUi-target {
+    border-radius: 2px !important;
+    border: 1px solid #515151 !important;
+    box-shadow: none !important;
+}
+
+.noUi-background{
+      box-shadow: none !important;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 12px !important;
+    height: 19px !important;
+    left: -11px !important;
+    top: -2px !important;
+}
+
+.noUi-handle {
+    border: none !important;
+    border-radius: 2px !important;
+    background: #ffffff !important;
+    cursor: default !important;
+    box-shadow: none !important;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    display: none !important;
+  }
+
+
+// // -----> Slide out menu stuff
+
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: grey; /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
