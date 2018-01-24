@@ -51,7 +51,6 @@ router.route('/:id')
 					if (err) {
 						return handleError(err)
 					} else {
-						console.log(created)
 						res.redirect('/user/profile')
 					}
 				});

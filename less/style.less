@@ -84,23 +84,12 @@ a {
 	color: @accent-color-1;
 	text-decoration: none;
 }
-button {
-	color: @text-color-dark;
-	height: 40px;
-	width: 65%;
-	background: @gradient-color1;
-	border: none;
-	font-size: 20px;
-  border-radius: 5px;
-  margin-top: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
+
 
 /* login view */
 #login-error-notice{
 	color: @error-text;
-	font-size: 20px;
+	font-size: 40px;
 	margin-top: 20px;
 }
 /* registration view */
@@ -108,19 +97,20 @@ button {
 	color: @error-text;
 	font-size: 2em;
 	position: absolute;
-	margin-top: 56.5%;
+	margin-top: 45%;
+  margin-left: 25%;
 }
 .main{
   text-align:center;
   position: absolute;
   width:100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 40%;
+  transform: translate(-40%, -40%);
 }
 #already-registered{
 	margin-top: 20px;
-  font-size: 15px;
+  font-size: 25px;
 }
 .form{
 	// margin-left: 10%;
@@ -128,13 +118,25 @@ button {
 }
 .login-field{
 	margin-bottom: 10px;
-  width: 65%;
-  height: 40px;
+  width: 85%;
+  height: 80px;
   border: none;
   background-color: @translucent-background;
   padding-left: 3%;
-  font-size: 15px;
+  font-size: 25px;
   border-radius: 5px;
+}
+button {
+  color: @text-color-dark;
+  height: 50px;
+  width: 85%;
+  background: @gradient-color1;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .show-images{
   width: 100%;

@@ -1,9 +1,9 @@
-const 	express = require('express'), 
-		app = express(),	
-		bodyParser = require('body-parser'),
-		session = require('express-session'),
-		methodOverride = require('method-override'),
-		port = 4100;
+const 	express = require('express'); 
+const	app = express();	
+const	bodyParser = require('body-parser');
+const	session = require('express-session');
+const	methodOverride = require('method-override');
+const	port = 4100;
 
 // db
 require('./db/db.js')
