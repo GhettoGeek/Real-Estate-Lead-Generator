@@ -85,7 +85,6 @@ router.route('/profile')
 			res.render('userProfile.ejs',{
 				requests: found.requestedProperties,
 				signedIn: req.session.loggedIn
-				agent: false
 			})
 		})
 		
