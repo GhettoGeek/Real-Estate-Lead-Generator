@@ -325,3 +325,57 @@ input::placeholder {
 .noUi-background {
   box-shadow: none !important;
 }
+.noUi-horizontal .noUi-handle {
+  width: 12px !important;
+  height: 19px !important;
+  left: -11px !important;
+  top: -2px !important;
+}
+.noUi-handle {
+  border: none !important;
+  border-radius: 2px !important;
+  background: #ffffff !important;
+  cursor: default !important;
+  box-shadow: none !important;
+}
+.noUi-handle:after,
+.noUi-handle:before {
+  display: none !important;
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+}
+.slideout-menu-left {
+  left: 0;
+}
+.slideout-menu-right {
+  right: 0;
+}
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: grey;
+  /* A background-color is required */
+  min-height: 100vh;
+}
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+.slideout-open .slideout-menu {
+  display: block;
+}

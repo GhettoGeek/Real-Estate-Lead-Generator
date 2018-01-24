@@ -5,29 +5,14 @@
 		<%include ./partials/head.ejs %>
 	</head>
 <body>
-	<!-- <% if (signedIn) { %> -->
+
 		<%include ./partials/header.ejs %>
-	<!-- <% } %> -->
+
 
 	<main class="main">
 		<h1>PROPERTY SEARCH</h1>
 
 		<form class="form" action="/home" method="POST">
-
-			<div>
-			<h2>neighborhood</h2>	
-			<select class="select-field" name="neighborhood">
-			<% const neighborhoods = []
-			for ( i = 0; i < houses.length; i++) { 
-				if (neighborhoods.indexOf(houses[i].neighborhood) === -1 ){
-					neighborhoods.push(houses[i].neighborhood) %>
-					<option value="<% houses[i].neighborhood%>"><%= houses[i].neighborhood %></option> 
-					<% 
-				}
-			} 
-			%>
-			</div>
-			</select>
 			<div class="sliderContainer">
 				<h2>Bedrooms</h2>
 				<div id="bedroomSlider"></div>
@@ -52,7 +37,20 @@
 				<div id="maxSqft" class="max">Max:</div>
 				<input type="hidden" id="hiddenMaxSqft" name="hiddenMaxSqft" value="6">
 			</div>
-
+			<div>
+			<h2>neighborhood</h2>	
+			<select class="select-field" name="chicagoNeighborhood">
+			<% const neighborhoods = []
+			for ( i = 0; i < houses.length; i++) { 
+				if (neighborhoods.indexOf(houses[i].neighborhood) === -1 ){
+					neighborhoods.push(houses[i].neighborhood) %>
+					<option value="<%= houses[i].neighborhood%>"><%= houses[i].neighborhood %></option> 
+					<% 
+				}
+			} 
+			%>
+			</div>
+			</select>
 			<button id="register-button">Search</button><br>
 		</form>
 	</main>
