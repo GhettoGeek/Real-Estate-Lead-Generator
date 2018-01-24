@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>User Profile</title>
+	<%include ./partials/head.ejs %>
+</head>
+<% if (signedIn) { %>
+	<%include ./partials/header.ejs %>
+<% } %>
+<body>
+	<!-- list the users requests -->
+	<ul>
+		<% for (let i = 0; i < requests.length; i++) { %>
+			<div class="user-requests">
+				<li>
+					<h2><%= requests[i].propertyAddress %></h2>
+					<h2><%= requests[i].requestedDate %></h2>
+					<% if (requests[i].accepted) { %>
+						<h2>CONFIRMED</h2>
+					<% } else { %>
+						<h2>PENDING</h2>
+					<% } %>
+				</li>
+			</div>
+		<% } %>
+	</ul>
+</body>
+</html>
