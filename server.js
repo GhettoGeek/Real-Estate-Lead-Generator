@@ -21,6 +21,9 @@ app.use(session({
 const UserController = require('./controllers/userController.js');
 app.use('/user/', UserController);
 
+const AgentController = require('./controllers/agentController.js');
+app.use('/agent/', AgentController);
+
 const HomeController = require('./controllers/homeController.js');
 app.use('/home/', HomeController);
 

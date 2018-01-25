@@ -67,8 +67,6 @@ router.route('/register')
 		//add user to db and redirect to home
 		const password = req.body.password;
 		const hashword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-					console.log(req.sessions.loggedIn)
-
 		const newDbEntry = {
 			fullname: req.body.fullname,
 			email: req.body.email,
@@ -94,6 +92,35 @@ router.route('/profile')
 		})
 		
 	})
+
+///Agent Login
+
+// router.route('/agentRegister')
+// 	.get((req,res)=>{
+// 		res.render('agentRegister.ejs',{
+// 		message: false,
+// 		signedIn: req.session.loggedIn
+// 		}) // Add option to see if user is already registered
+// 	})
+// 	.post((req,res)=>{
+// 		//add user to db and redirect to home
+// 		const password = req.body.password;
+// 		const hashword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+// 		const newDbEntry = {
+// 			fullname: req.body.fullname,
+// 			email: req.body.email,
+// 			password: hashword,	
+// 		}
+
+// 		Agent.create(newDbEntry, (err,created)=>{
+// 			if (err){
+// 				res.render('agentRegister.ejs',{message: true});
+// 			} else {
+// 				res.redirect('/user/login');
+// 			}
+// 		})
+// 	})
+
 
 module.exports  = router;
 
