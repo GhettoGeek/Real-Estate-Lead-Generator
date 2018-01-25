@@ -59,8 +59,8 @@ router.route('/logout')
 router.route('/register')
 	.get((req,res)=>{
 		res.render('register.ejs',{
-		message: false,
-		signedIn: req.session.loggedIn
+		message: false
+		// signedIn: req.session.loggedIn
 		}) // Add option to see if user is already registered
 	})
 	.post((req,res)=>{
@@ -85,6 +85,7 @@ router.route('/register')
 router.route('/profile')
 	.get((req,res)=>{
 		User.findOne({email: req.session.email},(err,found)=>{
+			console.log(found);
 			res.render('userProfile.ejs',{
 				requests: found.requestedProperties,
 				signedIn: req.session.loggedIn

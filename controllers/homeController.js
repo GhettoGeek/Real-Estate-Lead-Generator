@@ -5,7 +5,7 @@ const Homes = require('../models/homes.js');
 const Request = require('../models/requestModel.js');
 
 router.route('/')
-	// Render the search page for the user
+	// Render the search page for the user at the /home/ route
 	.get((req,res)=>{
 		Homes.find({},(err, foundHouses) => {
 			res.render('search.ejs',{
@@ -74,5 +74,27 @@ router.route('/:id')
 			})
 		})
 	})
+	.delete((req,res)=>{	
+		// Find the user who made this request
+		User.find({email: req.session.email}, (err,foundUser)=>{
+			// Loop through users array containing all the requested showings
+			for (let i = 0; i < foundUser[0].requestedProperties.length; i++) {
+				// Remove the request whos id matches req.params.id
+				if (foundUser[0].requestedProperties[i].id == req.params.id) {
+					foundUser[0].requestedProperties.splice(i,1);
+				};
+			};
+			foundUser[0].save((err)=>{
+				// Now remove the request from the requests database
+				Request.findByIdAndRemove(req.params.id,(err,foundRequest)=>{
+					if (err) {
+						console.log(err);
+					} else res.redirect('/user/profile');
+				});
+			});
+		});
+	});
+
+	
 
 module.exports = router;

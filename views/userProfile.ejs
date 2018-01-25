@@ -17,6 +17,9 @@
 					<% } else { %>
 						<h2>PENDING</h2>
 					<% } %>
+					<form id="cancel-button" action="/home/<%= requests[i].id %>?_method=DELETE" method="POST">
+						<button>CANCEL</button>
+					</form>
 				</li>
 			</div>
 		<% } %>
