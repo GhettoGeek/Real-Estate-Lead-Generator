@@ -10,6 +10,8 @@ router.route('/')
 		Homes.find({},(err, foundHouses) => {
 			res.render('search.ejs',{
 				houses: foundHouses,
+				signedIn: req.session.loggedIn
+
 			})
 		})
 	})
@@ -43,6 +45,8 @@ router.route('/:id')
 				home: foundHome,
 				signedIn: req.session.loggedIn
 			})
+							console.log(foundHome)
+
 		})
 	})
 	.post((req,res)=>{

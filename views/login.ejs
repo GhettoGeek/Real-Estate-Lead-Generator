@@ -3,8 +3,11 @@
 		<title>Login</title>
 		<%include ./partials/head.ejs %>
 	</head>
+		<!-- contains body tag -->
+		<%include ./partials/header.ejs %>
 <body>
 	<main class="main">
+		<div class="expandableContainer">
 		<h1>LOGIN</h1>
 		<form class="form" action="/user/login" method="POST">
 			<input class="login-field" type="text" name="email" placeholder="Email"><br>
@@ -15,6 +18,8 @@
 			<% } %>
 			<p id="already-registered">Need an account? Sign up <a href="/user/register">here</a></p>
 		</form>
+		</div>
 	</main>
 </body>
+	<%include ./partials/footer.ejs %>
 </html>

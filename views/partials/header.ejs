@@ -1,11 +1,14 @@
   <body>
     <header>
-        <nav id="menu">
+        <nav id="menu" class=".backgroundImage">
         <h3>
-            <a href="/user/profile">Pending Show Requests</a>
             <a href="/home">Property Search</a>
-            <a href="/user/logout">Logout</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+            <% if (signedIn) { %>
+                <a href="/user/profile">Pending Show Requests</a>
+                <a href="/user/logout">Logout</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"></a>
+            <% } %>
+
         </h3>
         </nav>
       </header>

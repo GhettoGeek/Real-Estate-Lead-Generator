@@ -1,17 +1,15 @@
 <html>
-<head>
-	<title>Property Query</title>
-	<%include ./partials/head.ejs %>
-
-</head>
-<% if (signedIn) { %>
-	<%include ./partials/header.ejs %>
-<% } %>
+	<head>
+		<title>Search Page</title>
+		<%include ./partials/head.ejs %>
+	</head>
+		<!-- contains body tag -->
+		<%include ./partials/header.ejs %>
 <body>
 	<% for (let i = 0; i < homes.length; i++) { %>
 		<a href="home/<%= homes[i].id %>">
 			<div class="show-images">
-				<img class="showmany-img" style="background-image:url(<%= homes[i].img %>)">
+				<img class="showmany-img" style="background-image:url(<%= homes[i].img %>) no-repeat center center fixed">
 				<div class="showmanyBox">
 					<h1 class="showmanyAddress"><%= homes[i].address %>, <%= homes[i].address2 %></h1>
 					<h1 class="showmanyDetails"><%= homes[i].neighborhood %>, Beds: <%= homes[i].bedrooms %>, Baths: <%= homes[i].bathrooms %></h1>
@@ -21,4 +19,6 @@
 		</a>
 	<% } %>
 </body>
+	<%include ./partials/footer.ejs %>
+
 </html>

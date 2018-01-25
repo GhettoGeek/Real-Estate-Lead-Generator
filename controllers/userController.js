@@ -7,7 +7,8 @@ const	express = require('express'),
 router.route('/login')
 	.get((req,res)=>{
 		res.render('login.ejs', {
-			message: req.session.message
+			message: req.session.message,
+			signedIn: req.session.loggedIn
 		})
 	})
 	.post((req,res)=>{
@@ -63,11 +64,13 @@ router.route('/register')
 		//add user to db and redirect to home
 		const password = req.body.password;
 		const hashword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+					console.log(req.sessions.loggedIn)
 
 		const newDbEntry = {
 			fullname: req.body.fullname,
 			email: req.body.email,
-			password: hashword
+			password: hashword,	
+			signedIn: req.session.loggedIn
 		}
 
 		User.create(newDbEntry, (err,created)=>{
