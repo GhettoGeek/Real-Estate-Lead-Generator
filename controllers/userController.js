@@ -82,6 +82,7 @@ router.route('/register')
 router.route('/profile')
 	.get((req,res)=>{
 		User.findOne({email: req.session.email},(err,found)=>{
+			console.log(found);
 			res.render('userProfile.ejs',{
 				requests: found.requestedProperties,
 				signedIn: req.session.loggedIn

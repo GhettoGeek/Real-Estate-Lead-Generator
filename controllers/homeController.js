@@ -5,7 +5,7 @@ const Homes = require('../models/homes.js');
 const Request = require('../models/requestModel.js');
 
 router.route('/')
-	// Render the search page for the user
+	// Render the search page for the user at the /home/ route
 	.get((req,res)=>{
 		Homes.find({},(err, foundHouses) => {
 			res.render('search.ejs',{
@@ -70,5 +70,6 @@ router.route('/:id')
 			})
 		})
 	})
+	
 
 module.exports = router;
