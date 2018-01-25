@@ -59,8 +59,8 @@ router.route('/logout')
 router.route('/register')
 	.get((req,res)=>{
 		res.render('register.ejs',{
-		message: false,
-		signedIn: req.session.loggedIn
+		message: false
+		// signedIn: req.session.loggedIn
 		}) // Add option to see if user is already registered
 	})
 	.post((req,res)=>{
