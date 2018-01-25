@@ -9,7 +9,7 @@
 	<% for (let i = 0; i < homes.length; i++) { %>
 		<a href="home/<%= homes[i].id %>">
 			<div class="show-images">
-				<img class="showmany-img" style="background-image:url(<%= homes[i].img %>) no-repeat center center fixed">
+				<img class="showmany-img" style="background-image:url(<%= homes[i].img %>)">
 				<div class="showmanyBox">
 					<h1 class="showmanyAddress"><%= homes[i].address %>, <%= homes[i].address2 %></h1>
 					<h1 class="showmanyDetails"><%= homes[i].neighborhood %>, Beds: <%= homes[i].bedrooms %>, Baths: <%= homes[i].bathrooms %></h1>

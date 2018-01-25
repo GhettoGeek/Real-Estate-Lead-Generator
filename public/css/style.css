@@ -132,7 +132,6 @@ body {
   color: white;
 }
 h1 {
-  text-align: center;
   margin-bottom: 50px;
   font-size: 50px;
   color: #aaaaaa;
@@ -140,7 +139,6 @@ h1 {
   letter-spacing: 3px;
 }
 h2 {
-  text-align: center;
   margin-bottom: 20px;
   font-size: 30px;
   color: #aaaaaa;
@@ -148,13 +146,16 @@ h2 {
   letter-spacing: 3px;
 }
 h3 {
-  text-align: left;
-  margin: 20px;
   font-size: 20px;
   color: #aaaaaa;
   text-transform: uppercase;
   letter-spacing: 3px;
   line-height: 30px;
+}
+p {
+  font-size: 13px;
+  line-height: 15px;
+  margin-top: 20px;
 }
 a {
   color: #0fb8aF;
@@ -207,13 +208,13 @@ button {
   text-align: center;
 }
 .houseContainer {
-  width: 70vw;
-  transform: translate(15vw, 0);
+  width: 100vw;
+  transform: translate(0, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #434444;
+  background-color: rgba(67, 68, 68, 0.7);
 }
 #already-registered {
   margin-top: 20px;
@@ -290,7 +291,7 @@ input::placeholder {
   color: #444444;
 }
 .home-details {
-  margin: 40px;
+  margin: 80px;
   text-align: left;
 }
 .home-pic {
@@ -407,7 +408,8 @@ input::placeholder {
   z-index: 1;
   will-change: transform;
   background-color: #434444;
-  background-image: linear-gradient(to bottom, rgba(69, 69, 69, 0.8), rgba(80, 80, 80, 0.8)), url(../imgs/SkylineSunset.jpg);
+  min-height: 100%;
+  background-image: linear-gradient(to bottom, rgba(69, 69, 69, 0.6), rgba(80, 80, 80, 0.6)), url(../imgs/SkylineSunset.jpg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -519,5 +521,29 @@ input::placeholder {
   #already-registered {
     margin-top: 20px;
     font-size: 20px;
+  }
+  .expandableContainer {
+    margin-left: 80px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 70vw;
+    text-align: center;
+  }
+  .houseContainer {
+    width: 70vw;
+    transform: translate(15vw, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(67, 68, 68, 0.7);
+  }
+  p {
+    font-size: 15px;
+    line-height: 17px;
+    margin-top: 20px;
+  }
+  h1 {
+    margin-bottom: 20px;
   }
 }
