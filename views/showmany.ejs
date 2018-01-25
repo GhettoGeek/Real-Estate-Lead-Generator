@@ -1,12 +1,10 @@
 <html>
-<head>
-	<title>Property Query</title>
-	<%include ./partials/head.ejs %>
-
-</head>
-<% if (signedIn) { %>
-	<%include ./partials/header.ejs %>
-<% } %>
+	<head>
+		<title>Search Page</title>
+		<%include ./partials/head.ejs %>
+	</head>
+		<!-- contains body tag -->
+		<%include ./partials/header.ejs %>
 <body>
 	<% for (let i = 0; i < homes.length; i++) { %>
 		<a href="home/<%= homes[i].id %>">
@@ -21,4 +19,6 @@
 		</a>
 	<% } %>
 </body>
+	<%include ./partials/footer.ejs %>
+
 </html>

@@ -3,9 +3,7 @@
 	<title>User Profile</title>
 	<%include ./partials/head.ejs %>
 </head>
-<% if (signedIn) { %>
 	<%include ./partials/header.ejs %>
-<% } %>
 <body>
 	<!-- list the users requests -->
 	<ul>
@@ -23,5 +21,6 @@
 			</div>
 		<% } %>
 	</ul>
+	<%include ./partials/footer.ejs %>
 </body>
 </html>

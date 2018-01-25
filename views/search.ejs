@@ -9,8 +9,8 @@
 
 
 	<main class="main">
+		<div class="expandableContainer">
 		<h1>PROPERTY SEARCH</h1>
-
 		<form class="form" action="/home" method="POST">
 			<div class="sliderContainer">
 				<h2>Bedrooms</h2>
@@ -36,7 +36,7 @@
 				<div id="maxSqft" class="max">Max:</div>
 				<input type="hidden" id="hiddenMaxSqft" name="hiddenMaxSqft" value="6">
 			</div>
-			<div>
+			
 			<h2>neighborhood</h2>	
 			<select class="select-field" name="chicagoNeighborhood">
 			<% const neighborhoods = []
@@ -48,10 +48,13 @@
 				}
 			} 
 			%>
-			</div>
 			</select>
+		<div class="buttonContainer">
 			<button id="register-button">Search</button><br>
+		</div>
 		</form>
+
 	</main>
+	</div>
 	<%include ./partials/footer.ejs %>
 </html>
