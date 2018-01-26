@@ -24,8 +24,8 @@ router.route('/login')
 					res.redirect('/user/login');
 				}
 			} else {
-				Agent.findOne({email: req.body.email}, (err,userFound)=>{// check agent collection
-				if (userFound){
+				Agent.findOne({email: req.body.email}, (err,agentFound)=>{// check agent collection
+				if (agentFound){
 					//compare passwords
 					if (bcrypt.compareSync(req.body.password, userFound.password)) {
 						req.session.email = req.body.email;
@@ -86,41 +86,13 @@ router.route('/profile')
 	.get((req,res)=>{
 		User.findOne({email: req.session.email},(err,found)=>{
 			console.log(found);
-			res.render('userProfile.ejs',{
+			res.render('userProfile.ejs', {
 				requests: found.requestedProperties,
 				signedIn: req.session.loggedIn
 			})
 		})
 		
 	})
-
-///Agent Login
-
-// router.route('/agentRegister')
-// 	.get((req,res)=>{
-// 		res.render('agentRegister.ejs',{
-// 		message: false,
-// 		signedIn: req.session.loggedIn
-// 		}) // Add option to see if user is already registered
-// 	})
-// 	.post((req,res)=>{
-// 		//add user to db and redirect to home
-// 		const password = req.body.password;
-// 		const hashword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-// 		const newDbEntry = {
-// 			fullname: req.body.fullname,
-// 			email: req.body.email,
-// 			password: hashword,	
-// 		}
-
-// 		Agent.create(newDbEntry, (err,created)=>{
-// 			if (err){
-// 				res.render('agentRegister.ejs',{message: true});
-// 			} else {
-// 				res.redirect('/user/login');
-// 			}
-// 		})
-// 	})
 
 
 module.exports  = router;
