@@ -3,6 +3,7 @@ const	app = express();
 const	bodyParser = require('body-parser');
 const	session = require('express-session');
 const	methodOverride = require('method-override');
+<<<<<<< HEAD
 const 	require('dotenv').config();
 const	port = 4100;
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/grocery_app_dev';
@@ -13,7 +14,13 @@ app.listen(port);
 console.log('---------------------------------');
 console.log('Server running on port: ' + port);
 console.log('---------------------------------');
+=======
+const	port = process.env.PORT || 3000;
+const 	mongoUri = process.env.DB_HOST || 'mongodb://localhost:27017/grocery_app_dev';
+>>>>>>> 35155ce73737a65c48281c8855423339a5c8acaf
 
+// require('dotenv').config();
+require('dotenv').config({path: './process.env'})
 // db
 require('./db/db.js')
 // middleware

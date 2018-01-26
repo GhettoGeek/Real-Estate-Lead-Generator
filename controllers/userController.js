@@ -58,10 +58,7 @@ router.route('/logout')
 
 router.route('/register')
 	.get((req,res)=>{
-		res.render('register.ejs',{
-		message: false
-		// signedIn: req.session.loggedIn
-		}) // Add option to see if user is already registered
+		res.render('register.ejs',{message: false}) // Add option to see if user is already registered
 	})
 	.post((req,res)=>{
 		//add user to db and redirect to home
