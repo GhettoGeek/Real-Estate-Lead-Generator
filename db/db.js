@@ -4,7 +4,7 @@ const dummyData = require('../models/dummydata.js');
 
 const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/realestates';
 
-mongoose.connect(process.env.DB_HOST);
+mongoose.connect(mongoUri);
 
 mongoose.connection.once('open', ()=>{
 	console.log('Database connected on 27017');
