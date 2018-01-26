@@ -58,16 +58,13 @@ router.route('/logout')
 
 router.route('/register')
 	.get((req,res)=>{
-		res.render('register.ejs',{
-		message: false
-		// signedIn: req.session.loggedIn
-		}) // Add option to see if user is already registered
+		res.render('register.ejs',{message: false}) // Add option to see if user is already registered
 	})
 	.post((req,res)=>{
 		//add user to db and redirect to home
 		const password = req.body.password;
 		const hashword = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-					console.log(req.sessions.loggedIn)
+		console.log(req.sessions.loggedIn)
 
 		const newDbEntry = {
 			fullname: req.body.fullname,

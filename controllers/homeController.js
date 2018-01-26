@@ -45,7 +45,6 @@ router.route('/:id')
 				home: foundHome,
 				signedIn: req.session.loggedIn
 			})
-							console.log(foundHome)
 
 		})
 	})
