@@ -16,8 +16,13 @@ mongoose.connection.on('error', () => {
 	console.log('there was an error connecting', error);
 })
 
-Homes.collection.insertMany(dummyData,(err, data) => {
-    console.log("added provided vampire data");
-    console.log(data);
-    mongoose.connection.close();
-});
+Homes.find({}, (err, data) => {
+	console.log(data.length + " records in database")
+	if(data.length == 0) {
+		Homes.collection.insertMany(dummyData, (err, data) => {
+		    console.log("added provided vampire data");
+		    console.log("\n\n\ninserted " + data.insertedCount + " records");
+		});
+	}
+})
+
