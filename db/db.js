@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 const Homes = require('../models/homes.js');
 const dummyData = require('../models/dummydata.js');
 
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/realestates';
+
 mongoose.connect(process.env.DB_HOST);
 
 mongoose.connection.once('open', ()=>{
