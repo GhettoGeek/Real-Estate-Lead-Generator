@@ -3,7 +3,16 @@ const	app = express();
 const	bodyParser = require('body-parser');
 const	session = require('express-session');
 const	methodOverride = require('method-override');
+const 	require('dotenv').config();
 const	port = 4100;
+const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/grocery_app_dev';
+
+mongoose.connect(mongoUri);
+
+app.listen(port);
+console.log('---------------------------------');
+console.log('Server running on port: ' + port);
+console.log('---------------------------------');
 
 // db
 require('./db/db.js')
