@@ -3,8 +3,11 @@ const	app = express();
 const	bodyParser = require('body-parser');
 const	session = require('express-session');
 const	methodOverride = require('method-override');
-const	port = 4100;
+const	port = process.env.PORT || 3000;
+const 	mongoUri = process.env.DB_HOST || 'mongodb://localhost:27017/grocery_app_dev';
 
+// require('dotenv').config();
+require('dotenv').config({path: './process.env'})
 // db
 require('./db/db.js')
 // middleware
@@ -20,6 +23,9 @@ app.use(session({
 // controllers
 const UserController = require('./controllers/userController.js');
 app.use('/user/', UserController);
+
+const AgentController = require('./controllers/agentController.js');
+app.use('/agent/', AgentController);
 
 const HomeController = require('./controllers/homeController.js');
 app.use('/home/', HomeController);

@@ -432,6 +432,39 @@ input::placeholder {
   letter-spacing: 2px;
   float: right;
 }
+/*User Profile Page*/
+.showingsList {
+  margin-top: 100px;
+}
+.user-requests {
+  font-size: 1.2em;
+  background-color: #434444;
+}
+.request-data {
+  margin-bottom: 1em;
+  margin-left: .5em;
+}
+.pending-container {
+  padding: 1em;
+}
+#confirmed {
+  color: green;
+  font-size: 1.2em;
+}
+#pending {
+  color: red;
+  font-size: 1.2em;
+  margin-top: .5em;
+  margin-left: .5em;
+}
+.expandableShowings {
+  margin-left: 80px;
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 @media only screen and (min-width: 1024px) {
   h1 {
     font-size: 30px;
