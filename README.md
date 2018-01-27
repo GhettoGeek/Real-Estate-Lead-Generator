@@ -51,7 +51,7 @@ User profile page         |  Agents request view page
 * <a href="https://www.javascript.com/">javscript</a> - Programming language used for most of the apps functionality
 
 ## Requirements for install/use
-App is available <a href="#">HERE</a><br>
+App is available <a href="http://realestateleadgenerator.herokuapp.com/">HERE</a><br>
 Recommended desktop browsers<br>
 * google chrome
 * safari

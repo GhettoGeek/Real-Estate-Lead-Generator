@@ -22,7 +22,6 @@ Homes.find({}, (err, data) => {
 	console.log(data.length + " records in database")
 	if(data.length == 0) {
 		Homes.collection.insertMany(dummyData, (err, data) => {
-		    console.log("added provided vampire data");
 		    console.log("\n\n\ninserted " + data.insertedCount + " records");
 		});
 	}

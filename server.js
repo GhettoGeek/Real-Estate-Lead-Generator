@@ -4,7 +4,8 @@ const	bodyParser = require('body-parser');
 const	session = require('express-session');
 const	methodOverride = require('method-override');
 const	port = process.env.PORT || 3000;
-const 	mongoUri = process.env.DB_HOST || 'mongodb://localhost:27017/grocery_app_dev';
+// const 	mongoUri = process.env.DB_HOST || 'mongodb://localhost:27017/grocery_app_dev';
+const 	mongoUri = 'mongodb://localhost:27017/grocery_app_dev';
 
 require('dotenv').config();
 // require('dotenv').config({path: './process.env'})
